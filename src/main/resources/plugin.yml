@@ -1,0 +1,7 @@
+name: Zombies
+version: '${project.version}'
+main: com.zombies.Core
+api-version: 1.14
+commands:
+  start:
+    description: asd
