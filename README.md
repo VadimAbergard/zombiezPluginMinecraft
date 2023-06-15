@@ -6,6 +6,7 @@ how playing:
 1. download server and start file "start.bat" and version Java 16\17\18 https://disk.yandex.ru/d/lk5fUWIEIKSY-w
 2. download mods https://disk.yandex.ru/d/1IEllNfgQ54HJA
 3. dowload resourse pack https://disk.yandex.ru/d/kGRZSZibqsqMFA
+4. in the server tab, add the server and enter the address "localhost"
 
 gameplay:
 
