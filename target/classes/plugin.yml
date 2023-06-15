@@ -1,7 +1,0 @@
-name: Zombies
-version: '1.0'
-main: com.zombies.Core
-api-version: 1.14
-commands:
-  start:
-    description: asd
