@@ -7,7 +7,7 @@ how playing:
 2. download mods https://disk.yandex.ru/d/1IEllNfgQ54HJA
 3. dowload resourse pack https://disk.yandex.ru/d/kGRZSZibqsqMFA
 
-video gameplay:
+gameplay:
 
 hospital - https://disk.yandex.ru/i/Pf2Alnp8fuu_7w
 
