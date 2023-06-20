@@ -10,12 +10,6 @@ import org.bukkit.entity.Player;
 
 public class CommandStart implements CommandExecutor {
 
-    /*private Core plugin;
-
-    public CommandStart(Core plugin) {
-        this.plugin = plugin;
-    }*/
-
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         Player player = (Player) sender;

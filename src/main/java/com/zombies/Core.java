@@ -19,7 +19,6 @@ public final class Core extends JavaPlugin {
         Trigger.init(this);
 
         getServer().getPluginManager().registerEvents(new ServerHandler(this), this);
-        //getCommand("start").setExecutor(new CommandStart(this));
         getServer().getScheduler().runTaskTimer(this, () -> {
             for (int i = 0; i < 3; i++) {
                 spawnParticle(Particle.EXPLOSION_NORMAL, getLocation(5, 5 + i, 5), 5);

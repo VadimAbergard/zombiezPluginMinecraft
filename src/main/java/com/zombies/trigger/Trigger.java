@@ -6,9 +6,6 @@ import org.bukkit.*;
 import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitTask;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-
 public class Trigger {
 
     private static Core core;
@@ -74,12 +71,6 @@ public class Trigger {
                     case 4:
                         if(playerLocation.distance(triggerLocation) < 3)Game.stop();
                         break;
-                    /*case 0:
-                        if(playerLocation.distance(triggerLocation) < 2) nextStage("стадия 2", 4, 4, 9);
-                        break;
-                    case 1:
-                        if(playerLocation.distance(triggerLocation) < 2) nextStage("стадия 3", -5, 4, 13);
-                        break;*/
                 }
                 break;
             case DEPOT:
@@ -127,11 +118,6 @@ public class Trigger {
                             Game.stop();
                         }
                         break;
-                    /*case 4:
-                        if (playerLocation.distance(triggerLocation) < 3) {
-                            nextStageF("найдите термит в бочках", 77, 59, 172, "tnt");
-                        }
-                        break;*/
                 }
                 break;
         }
@@ -142,14 +128,7 @@ public class Trigger {
 
         switch (Game.getTypeMap()) {
             case HOSPITAL:
-                switch (stage) {
-                    /*case 0:
-                        if(triggerItem.equals(material)) nextStage("стадия 2", Material.ARROW);
-                        break;*/
-                    /*case 1:
-                        if(triggerItem.equals(material)) nextStage("стадия 3", Material.STONE);
-                        break;*/
-                }
+                switch (stage) {}
                 break;
         }
     }
@@ -203,40 +182,6 @@ public class Trigger {
         Bukkit.dispatchCommand(Bukkit.getConsoleSender(),
                 "give " + player.getName() + " " + nameRewardItem);
     }
-
-    /*public static void handle(Location playerLocation, TypeTrigger typeTrigger) {
-        switch (typeTrigger) {
-            case MOVE:
-                switch (Game.getTypeMap()) {
-                    case TEST:
-                        switch (stage) {
-                            *//*case 0:
-                                if(playerLocation.distance(triggerLocation) < 2) nextStage("стадия 2", 4, 4, 9);
-                                break;
-                            case 1:
-                                if(playerLocation.distance(triggerLocation) < 2) nextStage("стадия 3", -5, 4, 13);
-                                break;*//*
-                        }
-                        break;
-                }
-                break;
-            case PICK_UP:
-                switch (Game.getTypeMap()) {
-                    case TEST:
-                        switch (stage) {
-                            case 0:
-                                if(playerLocation.distance(triggerLocation) < 2) nextStage("стадия 2", 4, 4, 9);
-                                break;
-                            case 1:
-                                if(playerLocation.distance(triggerLocation) < 2) nextStage("стадия 3", -5, 4, 13);
-                                break;
-                        }
-                        break;
-                }
-                break;
-                break;
-        }
-    }*/
 
     public static void nextStage(String purpose, float x, float y, float z) {
         trigger = TypeTrigger.MOVE;

@@ -3,8 +3,6 @@ package com.zombies;
 import com.zombies.map.TypeMap;
 import com.zombies.music.TypeMusic;
 import com.zombies.trigger.Trigger;
-import net.md_5.bungee.api.ChatMessageType;
-import net.md_5.bungee.api.chat.TextComponent;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.Material;
@@ -161,23 +159,6 @@ public class Game {
                 spawnEnemy(location);
             }
         },0L, 20L * 9);
-
-        /*task = core.getServer().getScheduler().runTaskTimer(core, () -> {
-            for(Location location : spawnPointEnemy) {
-                if(Bukkit.getWorld("world").getEntities().size() >= maxSpawnedEnemy + Bukkit.getOnlinePlayers().size()) break;
-                if(mainPlayer.getLocation().distance(location) < 20) {
-                    if(perLoc.get() != null) {
-                        if(perLoc.get().equals(location)) {
-                            location = spawnPointEnemy.get((int)(Math.random() * spawnPointEnemy.size()));
-                            spawnEnemy(location);
-                            continue;
-                        }
-                    }
-                }
-                spawnEnemy(location);
-                perLoc.set(location);
-            }
-        },0L, 20L);*/
     }
 
     public static void stop() {
@@ -300,13 +281,6 @@ public class Game {
     public static void updateSpawnPoints() {
         switch (typeMap) {
             case HOSPITAL:
-                /*if(players.get(0).getLocation().distance(Core.getLocation(143, 117, 107)) < 3) {
-                    Bukkit.getWorld("world").getEntities().forEach(entity -> {
-                        if(!(entity instanceof Player)) {
-                            entity.teleport(Core.getLocation(136, 115, 91));
-                        }
-                    });
-                }*/
                 break;
             case DEPOT:
                 if(players.get(0).getLocation().distance(Core.getLocation(108, 54, 183)) < 3) {
@@ -331,13 +305,6 @@ public class Game {
                     spawnPointEnemy.add(Core.getLocation(70, 70, 158));
                     spawnPointEnemy.add(Core.getLocation(67, 70, 166));
                 }
-                /*if(players.get(0).getLocation().distance(Core.getLocation(0, 4, 0)) < 10)
-                    setSpawnPointEnemy(Core.getLocation(9, 9, 8), Core.getLocation(6, 9, 8),
-                            Core.getLocation(15, 9, 8), Core.getLocation(-5, 9, 8));
-
-                if(players.get(0).getLocation().distance(Core.getLocation(20, 4, 0)) < 10)
-                    setSpawnPointEnemy(Core.getLocation(9, 30, 8), Core.getLocation(6, 30, 8),
-                            Core.getLocation(15, 30, 8), Core.getLocation(-5, 30, 8));*/
                 break;
         }
     }

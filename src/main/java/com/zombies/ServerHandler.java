@@ -1,6 +1,5 @@
 package com.zombies;
 
-import com.zombies.map.TypeMap;
 import com.zombies.trigger.Trigger;
 import org.bukkit.Bukkit;
 import org.bukkit.GameMode;
@@ -12,7 +11,6 @@ import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.entity.EntityDeathEvent;
 import org.bukkit.event.player.*;
-import org.bukkit.inventory.ItemStack;
 import org.bukkit.potion.PotionEffectType;
 
 public class ServerHandler implements Listener {
@@ -43,29 +41,6 @@ public class ServerHandler implements Listener {
         } else {
             player.teleport(Game.getLobbyLocation());
         }
-
-        //Game.updatePurpose("что-то");
-        //Game.start(TypeMap.DEPOT);
-        //Trigger.nextStage("стадиия 1", Material.DIAMOND_SWORD);
-        //Trigger.nextStageF("стадиия 1", 4, 4, 4, "stone");
-
-        /*core.getServer().getScheduler().runTaskLater(core, () -> {
-            Game.updatePurpose("что-то 2");
-        },40L);*/
-        /*BossBar bar = Bukkit.createBossBar(Core.color("цель: &eнет"), BarColor.WHITE, BarStyle.SOLID);
-        bar.setProgress(0);
-        bar.addPlayer(player);
-
-        for(int i = 1;i <= 20;i++) {
-            int finalI = i;
-            core.getServer().getScheduler().runTaskLater(core, () -> {
-                bar.setProgress(finalI / 20f);
-            }, i);
-        }*/
-
-        /*core.getServer().getScheduler().runTaskTimer(core, () -> {
-            //Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "playsound minecraft:code_silver music @a 0 0 0 1000000");
-        },0L, 20L*//*5351*//*);*/
     }
 
     @EventHandler
@@ -108,13 +83,6 @@ public class ServerHandler implements Listener {
     @EventHandler
     public void onPlayerBreakBlock(BlockBreakEvent e) {
         e.setCancelled(!e.getPlayer().getGameMode().equals(GameMode.CREATIVE));
-    }
-
-
-    @EventHandler
-    public void onPlayerRBM(PlayerInteractEvent e) {
-        Player player = e.getPlayer();
-        //ItemStack itemInHand = player.getItemInHand();
     }
 
     @EventHandler
